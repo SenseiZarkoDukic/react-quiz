@@ -1,4 +1,5 @@
 import Options from "./Options";
+import Progress from "./Progress";
 
 function Question({ question, dispatch, answer }) {
   console.log(question);
