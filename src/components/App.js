@@ -40,10 +40,6 @@ function reducer(state, action) {
         ...state,
         index: state.index + 1,
         answer: null,
-        status:
-          state.index === state.questions.length - 1
-            ? "finished"
-            : state.status,
       };
     default:
       throw new Error("Action unknown");
