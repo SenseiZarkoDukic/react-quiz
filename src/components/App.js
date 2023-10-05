@@ -53,6 +53,10 @@ export default function App() {
   );
 
   const numQuestions = questions.length;
+  const maxPossiblePoints = questions.reduce(
+    (prev, curr) => prev + curr.points,
+    0
+  );
 
   useEffect(function () {
     fetch("http://localhost:9000/questions")
@@ -76,6 +80,7 @@ export default function App() {
               index={index}
               numQuestions={numQuestions}
               points={points}
+              maxPossiblePoints={maxPossiblePoints}
             />
             <Question
               question={questions[index]}
