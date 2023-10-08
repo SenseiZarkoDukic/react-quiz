@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-function Timer() {
+function Timer({ secondsRemaining, dispatch }) {
   useEffect(() => {
-    setInterval(() => {}, 1000);
-  }, []);
+    setInterval(() => {
+      dispatch({ type: "tick" });
+    }, 1000);
+  }, [dispatch]);
   return (
     <div className="timer">
-      <p>05:00</p>
+      <p>{secondsRemaining}</p>
     </div>
   );
 }
