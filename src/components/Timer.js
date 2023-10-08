@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 const Timer = ({ initialTime }) => {
   const [time, setTime] = useState(initialTime);
+  const seconds = String(time % 60).padStart(2, 0);
+  const minutes = String(Math.floor(time / 60)).padStart(2, 0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,7 +15,9 @@ const Timer = ({ initialTime }) => {
 
   return (
     <div className="timer">
-      <p>{time / 60}</p>
+      <p>
+        {minutes}:{seconds}
+      </p>
     </div>
   );
 };
