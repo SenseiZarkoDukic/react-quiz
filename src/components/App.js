@@ -20,6 +20,7 @@ const initialState = {
   answer: null,
   points: 0,
   highscore: 0,
+  secondsRemaining: 10,
 };
 
 function reducer(state, action) {
@@ -107,7 +108,7 @@ export default function App() {
               answer={answer}
             />
             <Footer>
-              <Timer initialTime={300} />
+              <Timer />
               <NextButton
                 dispatch={dispatch}
                 answer={answer}
