@@ -12,8 +12,8 @@ const Timer = ({ initialTime }) => {
   }, []);
 
   return (
-    <div>
-      <h2>Time Remaining: {time}</h2>
+    <div className="timer">
+      <p>{time / 60}</p>
     </div>
   );
 };

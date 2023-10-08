@@ -107,7 +107,7 @@ export default function App() {
               answer={answer}
             />
             <Footer>
-              <Timer initialTime={5000} />
+              <Timer initialTime={300} />
               <NextButton
                 dispatch={dispatch}
                 answer={answer}

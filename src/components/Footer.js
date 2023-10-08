@@ -1,5 +1,5 @@
 function Footer({ children }) {
-  return <footer className="timer">{children}</footer>;
+  return <footer>{children}</footer>;
 }
 
 export default Footer;
