@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 function Timer({ secondsRemaining, dispatch }) {
   const minutes = String(Math.floor(secondsRemaining / 60)).padStart(2, 0);
