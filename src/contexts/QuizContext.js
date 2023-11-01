@@ -108,6 +108,7 @@ function useQuiz() {
   if (context === undefined) {
     throw new Error("useQuiz must be used within a QuizProvider");
   }
+  return context;
 }
 
-export default QuizProvider;
+export { QuizProvider, useQuiz };
