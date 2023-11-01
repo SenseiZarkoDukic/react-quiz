@@ -67,7 +67,16 @@ function reducer(state, action) {
 
 function QuizProvider({ children }) {
   const [
-    { questions, status, index, answer, points, highscore, secondsRemaining },
+    {
+      questions,
+
+      status,
+      index,
+      answer,
+      points,
+      highscore,
+      secondsRemaining,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
 
@@ -86,7 +95,7 @@ function QuizProvider({ children }) {
   return (
     <QuizContext.Provider
       value={{
-        questions,
+        question: questions[index],
         status,
         index,
         answer,
